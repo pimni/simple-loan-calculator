@@ -1,18 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="คำนวณสินเชื่อ"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/teal_700"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="จำนวนเงินที่ขอกู้(บาท)"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"/>
+    <EditText
+        android:id="@+id/inputMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="อัตราดอกเบี้ย(% ต่อปี)"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"/>
+    <EditText
+        android:id="@+id/inputPercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ระยะเวลาที่ขอกู้(ปี)"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"/>
+    <EditText
+        android:id="@+id/inputYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnCal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="คำนวณ"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="@color/teal_700"/>
+
+    <Button
+        android:id="@+id/btnRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*สินเชื่อแนะนำ"
+        android:layout_gravity="right"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="25dp"
+        android:backgroundTint="#9F9F9F"
+        android:textColor="@color/black"/>
+
+</LinearLayout>
