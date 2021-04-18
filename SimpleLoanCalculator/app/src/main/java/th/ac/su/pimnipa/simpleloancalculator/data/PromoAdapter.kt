@@ -8,7 +8,7 @@ import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.activity_detail.view.*
 import th.ac.su.pimnipa.simpleloancalculator.R
 
-class PromoAdapter(private val context: Context, private val dataSource:ArrayList<Promo>) : BaseAdapter() {
+abstract class PromoAdapter(private val context: Context, private val dataSource:ArrayList<Promo>) : BaseAdapter() {
     private val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
